@@ -47,6 +47,7 @@ async def stockTracker(request):
         thread_list[i].start()
     for thread in thread_list:
         thread.join()
+        
 
     while not que.empty():
         result = que.get()
